@@ -1,0 +1,46 @@
+<html>
+<body>
+<script>
+var aa = { firstName: "Ashwini", Age: 22, Gender: "Female", City: "Tiruvalur"};
+var bb = { firstName: "Kalyan", Age: 04, Gender: "Male", City: "Mysore"};
+var cc = { firstName: "Barath", Age: 65, Gender: "Male", City: "Delhi"};
+var dd = { firstName: "Pavya", Age: 09, Gender: "Female", City: "Jaipur"};
+var ee = { firstName: "Kushi", Age: 29, Gender: "Female", City: "Kochi"};
+var ff = { firstName: "Guna", Age: 31, Gender: "Male", City: "Jammu"};
+var gg = { firstName: "Angel", Age: 39, Gender: "Female", City: "Mumbai"};
+var hh = { firstName: "Pooja", Age: 10, Gender: "Female", City: "Alahabad"};
+var ii = { firstName: "Rani", Age: 40, Gender: "Female", City: "Kolkata"};
+var jj = { firstName: "Raina", Age: 08, Gender: "Male", City: "Bihar"};
+var people = [aa, bb, cc, dd, ee, ff, gg, hh, ii, jj];
+console.log(people);
+
+var abc = people.sort(function(x,y){
+				if(x.firstName < y.firstName) return -1;
+				if(x.firstName > y.firstName) return 1;
+				if(x.firstName === y.firstName) return 0;
+				});
+				console.log(abc);
+				
+for (var i=0; i < people.length; i++){
+				if (people[i].Age <= 10){
+				console.log(people[i]);
+}		
+};		
+var cba = people.filter(function (ccc){
+		return	ccc.firstName === "Ashwini";
+			
+			});
+
+		console.log(cba);
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
