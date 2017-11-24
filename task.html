@@ -1,6 +1,10 @@
 <html>
+<head>
+</head>
 <body>
 <script>
+
+// Create and store the objects In an Array:
 var aa = { firstName: "Ashwini", Age: 22, Gender: "Female", City: "Tiruvalur"};
 var bb = { firstName: "Kalyan", Age: 04, Gender: "Male", City: "Mysore"};
 var cc = { firstName: "Barath", Age: 65, Gender: "Male", City: "Delhi"};
@@ -12,34 +16,31 @@ var hh = { firstName: "Pooja", Age: 10, Gender: "Female", City: "Alahabad"};
 var ii = { firstName: "Rani", Age: 40, Gender: "Female", City: "Kolkata"};
 var jj = { firstName: "Raina", Age: 08, Gender: "Male", City: "Bihar"};
 var people = [aa, bb, cc, dd, ee, ff, gg, hh, ii, jj];
-console.log(people);
 
-var abc = people.sort(function(x,y){
-				if(x.firstName < y.firstName) return -1;
-				if(x.firstName > y.firstName) return 1;
-				if(x.firstName === y.firstName) return 0;
+//Sort the Above Array By using firstName:
+const abc = people.sort(function(x,y){
+	       if(x.firstName < y.firstName) return -1;
+		   if(x.firstName > y.firstName) return 1;
+		   if(x.firstName === y.firstName) return 0;
 				});
-				console.log(abc);
+
+//List Out the people with Age less Than Or Equal to 10 years:				
 				
-for (var i=0; i < people.length; i++){
-				if (people[i].Age <= 10){
-				console.log(people[i]);
-}		
-};		
+var children = people.filter(function(p){
+		   return p.Age <= 10;
+		});
+		
+//Find A person From Above List Using Their Name:
+
 var cba = people.filter(function (ccc){
 		return	ccc.firstName === "Ashwini";
-			
 			});
 
-		console.log(cba);
-
-
-
-
-
-
-
-
+// The Results :			
+console.log(people);
+console.log(abc);
+console.log(children);			
+console.log(cba);
 
 </script>
 </body>
